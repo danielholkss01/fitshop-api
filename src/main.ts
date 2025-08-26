@@ -3,9 +3,12 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  // Allow your web app at http://localhost:3000 to call the API
-  app.enableCors({ origin: ['http://localhost:3000'] });
-  // Use port 3001 locally (Render/host may inject PORT later)
+
+  // TEMP: allow all origins so your Vercel site can call the API.
+  // (Tighten this later by listing your exact Vercel URL.)
+  app.enableCors({ origin: true });
+
+  // Use PORT from host, or 3001 locally.
   await app.listen(process.env.PORT || 3001);
   console.log('API running on http://localhost:' + (process.env.PORT || 3001));
 }
