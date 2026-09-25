@@ -1,19 +1,341 @@
 {
   "products": [
-    { "id": "t1", "category": "top", "name": "White Oxford Shirt", "price_pennies": 4500, "color_family": "white", "sizes": ["XS","S","M","L","XL"], "image_url": "https://picsum.photos/seed/top-oxford/600/600" },
-    { "id": "t2", "category": "top", "name": "Black T-Shirt", "price_pennies": 2000, "color_family": "black", "sizes": ["XS","S","M","L","XL"], "image_url": "https://picsum.photos/seed/top-blacktee/600/600" },
-    { "id": "t3", "category": "top", "name": "Navy Polo", "price_pennies": 3000, "color_family": "navy", "sizes": ["S","M","L"], "image_url": "https://picsum.photos/seed/top-navypolo/600/600" },
-
-    { "id": "b1", "category": "bottom", "name": "Navy Slim Chinos", "price_pennies": 6000, "color_family": "navy", "sizes": ["30","32","34","36"], "image_url": "https://picsum.photos/seed/bottom-chinos/600/600" },
-    { "id": "b2", "category": "bottom", "name": "Black Jeans", "price_pennies": 5500, "color_family": "black", "sizes": ["30","32","34","36"], "image_url": "https://picsum.photos/seed/bottom-jeans/600/600" },
-    { "id": "b3", "category": "bottom", "name": "Grey Trousers", "price_pennies": 6500, "color_family": "grey", "sizes": ["30","32","34","36"], "image_url": "https://picsum.photos/seed/bottom-grey/600/600" },
-
-    { "id": "s1", "category": "shoe", "name": "White Trainers", "price_pennies": 7000, "color_family": "white", "sizes": ["UK 8","UK 9","UK 10"], "image_url": "https://picsum.photos/seed/shoe-trainers/600/600" },
-    { "id": "s2", "category": "shoe", "name": "Black Derby", "price_pennies": 8500, "color_family": "black", "sizes": ["UK 8","UK 9","UK 10"], "image_url": "https://picsum.photos/seed/shoe-derby/600/600" },
-    { "id": "s3", "category": "shoe", "name": "Brown Loafers", "price_pennies": 9000, "color_family": "brown", "sizes": ["UK 8","UK 9","UK 10"], "image_url": "https://picsum.photos/seed/shoe-loafers/600/600" },
-
-    { "id": "a1", "category": "accessory", "name": "Grey Scarf", "price_pennies": 2000, "color_family": "grey", "sizes": ["OS"], "image_url": "https://picsum.photos/seed/acc-scarf/600/600" },
-    { "id": "a2", "category": "accessory", "name": "Navy Cap", "price_pennies": 1500, "color_family": "navy", "sizes": ["OS"], "image_url": "https://picsum.photos/seed/acc-cap/600/600" },
-    { "id": "a3", "category": "accessory", "name": "Black Belt", "price_pennies": 1800, "color_family": "black", "sizes": ["OS"], "image_url": "https://picsum.photos/seed/acc-belt/600/600" }
+    {
+      "id": "t1",
+      "category": "top",
+      "name": "White Oxford Shirt",
+      "price_pennies": 4500,
+      "color_family": "white",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "image_url": "https://picsum.photos/seed/top-oxford/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "t2",
+      "category": "top",
+      "name": "Black T-Shirt",
+      "price_pennies": 2000,
+      "color_family": "black",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "image_url": "https://picsum.photos/seed/top-blacktee/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "t3",
+      "category": "top",
+      "name": "Navy Polo",
+      "price_pennies": 3000,
+      "color_family": "navy",
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "image_url": "https://picsum.photos/seed/top-navypolo/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "b1",
+      "category": "bottom",
+      "name": "Navy Slim Chinos",
+      "price_pennies": 6000,
+      "color_family": "navy",
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "image_url": "https://picsum.photos/seed/bottom-chinos/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "b2",
+      "category": "bottom",
+      "name": "Black Jeans",
+      "price_pennies": 5500,
+      "color_family": "black",
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "image_url": "https://picsum.photos/seed/bottom-jeans/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "b3",
+      "category": "bottom",
+      "name": "Grey Trousers",
+      "price_pennies": 6500,
+      "color_family": "grey",
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "image_url": "https://picsum.photos/seed/bottom-grey/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "s1",
+      "category": "shoe",
+      "name": "White Trainers",
+      "price_pennies": 7000,
+      "color_family": "white",
+      "sizes": [
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "image_url": "https://picsum.photos/seed/shoe-trainers/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "s2",
+      "category": "shoe",
+      "name": "Black Derby",
+      "price_pennies": 8500,
+      "color_family": "black",
+      "sizes": [
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "image_url": "https://picsum.photos/seed/shoe-derby/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "s3",
+      "category": "shoe",
+      "name": "Brown Loafers",
+      "price_pennies": 9000,
+      "color_family": "brown",
+      "sizes": [
+        "UK 8",
+        "UK 9",
+        "UK 10"
+      ],
+      "image_url": "https://picsum.photos/seed/shoe-loafers/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "a1",
+      "category": "accessory",
+      "name": "Grey Scarf",
+      "price_pennies": 2000,
+      "color_family": "grey",
+      "sizes": [
+        "OS"
+      ],
+      "image_url": "https://picsum.photos/seed/acc-scarf/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "a2",
+      "category": "accessory",
+      "name": "Navy Cap",
+      "price_pennies": 1500,
+      "color_family": "navy",
+      "sizes": [
+        "OS"
+      ],
+      "image_url": "https://picsum.photos/seed/acc-cap/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "a3",
+      "category": "accessory",
+      "name": "Black Belt",
+      "price_pennies": 1800,
+      "color_family": "black",
+      "sizes": [
+        "OS"
+      ],
+      "image_url": "https://picsum.photos/seed/acc-belt/600/600",
+      "audience": "men"
+    },
+    {
+      "id": "wt1",
+      "audience": "women",
+      "category": "top",
+      "name": "White Cotton Shirt",
+      "price_pennies": 4500,
+      "color_family": "white",
+      "sizes": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "image_url": "https://picsum.photos/seed/women-white-shirt/600/600"
+    },
+    {
+      "id": "wt2",
+      "audience": "women",
+      "category": "top",
+      "name": "Black Ribbed Top",
+      "price_pennies": 2500,
+      "color_family": "black",
+      "sizes": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "image_url": "https://picsum.photos/seed/women-black-top/600/600"
+    },
+    {
+      "id": "wt3",
+      "audience": "women",
+      "category": "top",
+      "name": "Navy Blouse",
+      "price_pennies": 4000,
+      "color_family": "navy",
+      "sizes": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "image_url": "https://picsum.photos/seed/women-navy-blouse/600/600"
+    },
+    {
+      "id": "wb1",
+      "audience": "women",
+      "category": "bottom",
+      "name": "Black Wide Leg Trousers",
+      "price_pennies": 6000,
+      "color_family": "black",
+      "sizes": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "image_url": "https://picsum.photos/seed/women-black-trousers/600/600"
+    },
+    {
+      "id": "wb2",
+      "audience": "women",
+      "category": "bottom",
+      "name": "Blue Straight Leg Jeans",
+      "price_pennies": 5500,
+      "color_family": "blue",
+      "sizes": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "image_url": "https://picsum.photos/seed/women-blue-jeans/600/600"
+    },
+    {
+      "id": "wb3",
+      "audience": "women",
+      "category": "bottom",
+      "name": "Grey Tailored Trousers",
+      "price_pennies": 6500,
+      "color_family": "grey",
+      "sizes": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "image_url": "https://picsum.photos/seed/women-grey-trousers/600/600"
+    },
+    {
+      "id": "ws1",
+      "audience": "women",
+      "category": "shoe",
+      "name": "White Trainers",
+      "price_pennies": 7000,
+      "color_family": "white",
+      "sizes": [
+        "UK 4",
+        "UK 5",
+        "UK 6",
+        "UK 7",
+        "UK 8"
+      ],
+      "image_url": "https://picsum.photos/seed/women-white-trainers/600/600"
+    },
+    {
+      "id": "ws2",
+      "audience": "women",
+      "category": "shoe",
+      "name": "Black Loafers",
+      "price_pennies": 8000,
+      "color_family": "black",
+      "sizes": [
+        "UK 4",
+        "UK 5",
+        "UK 6",
+        "UK 7",
+        "UK 8"
+      ],
+      "image_url": "https://picsum.photos/seed/women-black-loafers/600/600"
+    },
+    {
+      "id": "ws3",
+      "audience": "women",
+      "category": "shoe",
+      "name": "Brown Ankle Boots",
+      "price_pennies": 9000,
+      "color_family": "brown",
+      "sizes": [
+        "UK 4",
+        "UK 5",
+        "UK 6",
+        "UK 7",
+        "UK 8"
+      ],
+      "image_url": "https://picsum.photos/seed/women-brown-boots/600/600"
+    },
+    {
+      "id": "wa1",
+      "audience": "women",
+      "category": "accessory",
+      "name": "Black Crossbody Bag",
+      "price_pennies": 2200,
+      "color_family": "black",
+      "sizes": [
+        "OS"
+      ],
+      "image_url": "https://picsum.photos/seed/women-black-bag/600/600"
+    },
+    {
+      "id": "wa2",
+      "audience": "women",
+      "category": "accessory",
+      "name": "Grey Scarf",
+      "price_pennies": 1800,
+      "color_family": "grey",
+      "sizes": [
+        "OS"
+      ],
+      "image_url": "https://picsum.photos/seed/women-grey-scarf/600/600"
+    }
   ]
 }

@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 type ProfileInput = {
+  audience?: 'men' | 'women';
   topSize?: string;
   bottomSize?: string;
   shoeSize?: string;
@@ -11,6 +12,7 @@ type ProfileInput = {
 
 type Product = {
   id: string;
+  audience: 'men' | 'women';
   category: 'top' | 'bottom' | 'shoe' | 'accessory';
   name: string;
   price_pennies: number; // <-- stored in pennies (e.g., £45 -> 4500)
@@ -48,7 +50,11 @@ export class OutfitsController {
   @Post('generate')
   generate(@Body() body: ProfileInput) {
     try {
+      if (body?.audience && body.audience !== 'men' && body.audience !== 'women') {
+        throw new HttpException('Choose men or women', HttpStatus.BAD_REQUEST);
+      }
       const prof: ProfileInput = {
+        audience: body?.audience ?? 'men',
         topSize: body?.topSize,
         bottomSize: body?.bottomSize,
         shoeSize: body?.shoeSize,
@@ -57,7 +63,7 @@ export class OutfitsController {
 
       const BUDGET_PENNIES = Math.round((prof.budget ?? 200) * 100); // convert to pennies
 
-      const all = loadCatalog();
+      const all = loadCatalog().filter(p => p.audience === prof.audience);
       const tops = all.filter(p => p.category === 'top' && fits(p, prof));
       const bottoms = all.filter(p => p.category === 'bottom' && fits(p, prof));
       const shoes = all.filter(p => p.category === 'shoe' && fits(p, prof));
@@ -95,6 +101,7 @@ export class OutfitsController {
       return { outfits: top3 };
     } catch (err: any) {
       console.error('Outfit generation error:', err?.message);
+      if (err instanceof HttpException) throw err;
       throw new HttpException(err?.message || 'Internal error', HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
